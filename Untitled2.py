@@ -15,5 +15,5 @@ for a in sentence:
   else:
    count += 0
 
-print("There are "  + str(count) + " " + letter + "s in " + sentence)
+print("There are "  + str(count) + " " + letter + "'s in " + sentence)
 
