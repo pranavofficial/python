@@ -12,7 +12,7 @@ count = 0
 #start loop
 for a in sentence:
   #check if variable is as same as letter
-  if (a == letter):
+  if (a.lower() == letter.lower()):
     #add 1 to count
     count += 1
   else:
