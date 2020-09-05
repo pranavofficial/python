@@ -19,5 +19,5 @@ for a in sentence:
     #dont increase count
    count += 0
 #display results
-print("There are "  + str(count) + " " + str(letter) + "'s in " + str(sentence))
+print("There are "  + str(count) + " " + letter + "'s in " + sentence)
 
