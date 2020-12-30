@@ -1,0 +1,109 @@
+import requests
+
+from bs4 import BeautifulSoup
+
+import pandas
+
+import replit
+
+import re
+
+import string
+
+page = requests.get('http://lego--pichar.repl.co/lego.html')
+
+soup = BeautifulSoup(page.text, 'html.parser')
+
+
+lstName = []
+
+lstPrice = []
+
+lstPiece = []
+
+lstJumbo = []
+
+products = soup.findAll(class_ = 'name')
+
+for name in products:
+  actualProducts = name.get_text()
+  lstName.append(actualProducts)
+
+print()
+
+pieceNum = soup.findAll(class_ = 'pieces')
+
+for name in pieceNum:
+  actualPieces = name.get_text()
+  pattern = ','
+  replace = ''
+  actualPieces = re.sub(pattern,replace,actualPieces)
+  lstPiece.append(actualPieces)
+
+print()
+
+priceNum = soup.findAll(class_ = 'price')
+
+for name in priceNum:
+  actualPrices = name.get_text()
+  lstPrice.append(actualPrices)
+
+Jumbo = soup.findAll(class_ = 'jumbotron')
+
+for name in Jumbo:
+  actualJumbo = name.get_text()
+  lstJumbo.append(actualJumbo)
+
+frame = pandas.DataFrame({'Product Name':lstName,'Product Pieces':lstPiece,'Product Price':lstPrice})
+
+frame.to_csv('lego.csv' , index = False , encoding = 'utf-8')
+
+frame1 = pandas.DataFrame({'JumboTron':lstJumbo})
+
+frame1.to_csv('jumbo.csv' , index = False , encoding = 'utf-8')
+
+print(frame)
+
+print()
+print()
+print()
+redo = 'y'
+while redo == 'y':
+  print("do you want to display csv file (1) or manually edit the csv file? (2) ")
+  print()
+  question = input("1/2     ")
+  if (question == '1'):
+    files = open('lego.csv','r')
+    print(files.read())
+    files.close()
+    redo = input("Go again?  y/n    ")
+
+  elif (question == '2'):   
+    replit.clear()
+
+    files = open('lego.csv','r+')
+    files.read()
+    lstNewName = []
+    pName1 = input("Enter the product name ")
+    pName = pName1.upper()
+    lstNewName.append(pName)
+    pPiece1 = input("Enter the number of pieces ")
+    pPiece =  pPiece1 + ' Pieces'
+
+    lstNewName.append(pPiece)
+    pPrice1 = input("Enter the price ")
+    pPrice = '$' + pPrice1
+    lstNewName.append(pPrice)
+    print("The new product is:")
+    print('\n\n\t\t',pName, '\t',pPiece, '\t',pPrice)
+    files.write(pName + ',' + pPiece + ',' + pPrice) 
+    files.write('\n')
+    files.close()
+    redo = input("Go again?  y/n    ")
+  else:
+    print("ERROR, Invalid RESPONSE PLEASE TRY AGAIN")
+    redo == 'y'
+else:
+  print("goodbye")
+  replit.clear()
+  quit()
