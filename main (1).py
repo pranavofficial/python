@@ -1,0 +1,326 @@
+from colorama import Fore, Style
+def hpchecker():
+  global hp
+  if (hp <= 0):
+    print("You died")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("Go back to the beginning and try again.")
+    quit()
+  else:
+    print()
+def gem():
+  print("There it is, The Gem of Eternal Life")
+  blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+  botfool = input("Do you a. Eat it   b.Do not touch it, but go the other way, because this is super creepy   c. Sell it on E-Bay   d. It is your PRECIOUSSSSSSS ")
+  if (botfool == "a" or botfool == "A"):
+    print("You choke on the gem")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("hp - 100")
+    hp = 100
+    hp = hp - 100
+    hpchecker()
+  elif (botfool == "b" or botfool == "B"):
+    print("You survive, but question why you went through all of that for nothing.")
+    quit()
+  elif (botfool == "c" or botfool == "C"):
+    print("After taking the Gem and selling it on E-Bay to MarsMan69420. You get 1 dollar and buy a nice Chocolate Ice Cream.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You know it was worth it.")
+    quit()
+  elif (botfool == "d" or botfool == "D"):
+    print("You treasure this gem above all else.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("It gives you everlasting life, but you develop a creepy alter ego named Hollum.")
+    quit()
+  else:
+    print(Fore.RED)
+    print("While stumbling and PRESSING THE WRONG KEY, you fall into a pit of lava")
+    print(Style.RESET_ALL)
+    hp = 0
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    hpchecker()
+
+def bigbrain():
+  print("You do not even have to fight The boss, but your stats do not increase")
+
+def run():
+  global hp
+  print("You escape the boss, but not before he scratches you for 10 hitpoints")
+  hp = hp - 10
+  hpchecker()
+
+def damagemaker():
+  global damage
+  global num
+  import random
+  num = random.randint(0, damage)
+
+def win():
+  global damage
+  damage = damage * 2
+
+def win1():
+  global hp
+  hp = hp * 2
+
+def crocfight():
+  global hp
+  global num
+  global damage
+  damagemaker()
+  if (num >= 20):
+    print("You hit King Croc for " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO  CONTINUE> ")
+    print(" King Crocodile Dies ")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    win()
+    print("Your Damage has doubled")
+    print("You now do a maximum of " , damage , " damage to enemies.")
+  else:
+    print("You hit King Croc for " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    kingcrochp = 20 - num
+    print("King Croc has " , kingcrochp , " hitpoints remaining.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("King Croc Uses His Bite Attack")
+    hp = hp - 20
+    hpchecker()
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("He did 20 damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("The King Croc Healed up")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You now have " , hp , " hitpoints left")
+    hpchecker()
+    crocfight()
+
+def trollfight():
+  global hp
+  global num
+  global damage
+  damagemaker()
+  if (num >= 50):
+    print("You hit The Terrible Troll for " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO  CONTINUE> ")
+    print(" The terrible Troll Dies ")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    win1()
+    print("Your hp has doubled")
+    print("You now have " , hp , " hitpoints.")
+  else:
+    print("You hit The Terrible Troll for " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    trollhp = 50 - num
+    print("The Troll has " , trollhp , " hitpoints remaining.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("The Terrible Troll Uses Troll Smash")
+    hp = hp - 30
+    hpchecker()
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("He did 25 damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("The Troll healed back up")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You now have " , hp , " hitpoints left")
+    hpchecker()
+    trollfight()
+#___________________________________________________
+def dragonfight():
+  global hp
+  global num
+  global damage
+  import random
+  dragonhp = random.randint(75, 225)
+  print ("the dragon has " , dragonhp , " hp")
+  damagemaker()
+  if (num >= dragonhp):
+    print("You hit The Ice Dragon for a total of " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO  CONTINUE> ")
+    print(" The Ice Dragon Explodes into pieces ")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You pass the exploded bits of the dragon and make your way to the temple of life.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    gem()
+
+  else:
+    print("You hit The Ice Dragon for a total of " , num , " damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    dragonhp = dragonhp - num
+    print("The Ice Dragon has " , dragonhp , " hitpoints remaining.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("The Ice Dragon Uses Dragon Breath")
+    hp = hp - 50
+    hpchecker()
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("He did 50 damage")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("The Dragon healed up")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You now have " , hp , " hitpoints left")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    dragonfight()
+
+
+def fight():
+  global damage
+  global hp
+  global num
+  while hp > 0:
+    print("You are now entering the swamp area.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    c1 = input ("Do you choose to swim through the swamp, or walk around it? a.Swim Through       b.Walk Around                             ")
+    if(c1 == "a" or c1 == "A"):
+      print("You swim through the Swamp...")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print("WHEN SUDDENLY...")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      hp = hp - 10
+      hpchecker()
+      print("The Crocodile King uses his bite attack.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print("IT IS A CRITICAL HIT! You know, because he surprised you.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print ("You know have " , hp , " hitpoints")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      c2 = input("Do you a.Run Away  or  b.Fight ")
+      if (c2 == "b" or c2 == "B"):
+        crocfight()
+      elif (c2 == "a" or c2 == "A"):
+        run()
+    elif (c1 == "b" or c1 == "B"):
+      bigbrain()
+    else:
+      print("When you pressed the wrong key, you stumbled into the swamp and King Crocodile bit your face off")
+      hp = hp - 100
+      hpchecker()
+    print("After trudging your way out of the swamp, you can see the Mountain where the gem of eternal life is rumored to be kept.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    fork = input("You now see a fork in the road, one way is short, and takes you accross a bridge directly to the mountain. The other way is longer and is probably miles apon miles of rough terrain covered in freezing cold snow. Which way do you travel through     a. The Bridge   b. The Rough Terrain ")
+    if (fork == "b" or fork == "B"):
+      bigbrain()
+    elif (fork == "a" or fork == "A"):
+      print ("You walk on the creaky bridge, it makes loud creak noises with every step you take.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print("WHEN SUDDENLY")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print("It feels as if a small volcanic eruption is happening under your feet.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print("You get boosted up in the air and fall down, taking 15 fall damage.")
+      hp = hp - 15
+      hpchecker()
+      print("And then you see him, the Terrible Troll.")
+      trollfootfest = input("Do you     a. Fight   or     b.Run ")
+      if (trollfootfest == "b" or trollfootfest == "B"):
+        run()
+      elif (trollfootfest == "a" or trollfootfest == "A"):
+        trollfight()
+      else:
+        print("You take to long to contemplte your decision, so the troll just bops you")
+        hp = hp - 100
+        hpchecker()
+    else:
+      print("You freeze in place and get frost bite.")
+      hp = hp - 100
+      hpchecker()
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("You now make your way to the mountain.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("And then at the very top, you can barely make out the temple of life.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("With your spirits boosted, you start jogging up to the temple, when suddenly the snow in front of you...")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("MOVES?!")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print ("The Guardian of the temple, the Ice Dragon Suddenly Smashes you with its claw for 35 piercing damage.")
+    hp = hp - 20
+    hpchecker()
+    final = input("Do you     a. Run Away for dear life     or    b. Fight until the end. ")
+    if (final == "a"  or final == "A"):
+      print("You turn around and head in the other direction, but the Ice dragon Freezes you with Ice Breath.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print ("Then he just licks you down like a popsicle")
+      hp = hp - 1000
+      hpchecker()
+    elif (final == "b" or final == "B"):
+      dragonfight()
+    else:
+      print("You stumble and the Ice Dragon takes advantage He smashes you with his pinkie claw.")
+      hp = hp - 200
+      hpchecker()
+  else:
+    hpchecker()
+
+
+print("You are an adventurer on a quest to find the jem of eternal life.")
+print("Only the letter please, and no periods.")
+blackyblockybloobloo = input("<PRESS ENTER TO CONTINUE> ")
+damage = 0
+hp = 100
+print("Choose Your Weapon.")
+print("a. The Staff of Lightning,  b. The Sword of Heroes, c.The Hammer of Fire")
+#weapon choosing
+def weapon(let):
+  global damage
+  global hp
+  if (let == "a" or let == "A"):
+    print("You have chosen the Staff of Lightning")
+    damage = damage + 75
+    hp = hp + 100
+    print("You do a maximum of " , damage , " damage with the Staff of Lightning.")
+  elif (let == "b" or let == "B"):
+    print("You have chosen the Sword of Heroes")
+    damage = damage + 100
+    hp = hp + 50
+    print("You do a maximum of " , damage , " damage with the Sword of Heroes.")
+  elif (let == "c" or let == "C"):
+    print("You have chosen the Hammer of Fire")
+    damage = damage + 150
+    print("You do a maximum of " , damage , " damage with the Hammer of Fire.")
+  elif (let == "LoL"):
+    print("You find a Weapon called the Dank LOL")
+    damage = damage + 1000000
+    print("which boosts you immediately to the mountain")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("And then at the very top, you can barely make out the temple of life.")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("With your spirits boosted, you start jogging up to the temple, when suddenly the snow in front of you...")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print("MOVES?!")
+    blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+    print ("The Guardian of the temple, the Ice Dragon Suddenly Smashes you with its claw for 35 piercing damage.")
+    hp = hp - 35
+    hpchecker()
+    final = input("Do you     a. Run Away for dear life     or    b. Fight until the end. ")
+    if (final == "a"  or final == "A"):
+      print("You turn around and head in the other direction, but the Ice dragon Freezes you with Ice Breath.")
+      blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+      print ("Then he just licks you down like a popsicle")
+      hp = hp - 1000
+      hpchecker()
+    elif (final == "b" or final == "B"):
+      dragonfight()
+    else:
+      print("You stumble and the Ice Dragon takes advantage He smashes you with his pinkie claw.")
+      hp = hp - 200
+      hpchecker()
+  else:
+    print("Choose a Valid Response.")
+    blackyblockybloobloo3 = input("<PRESS ENTER TO CONTINUE> ")
+    print("a. The Staff of Lightning,  b. The Sword of Heroes, c.The Hammer of Fire")
+    let1 = input("Pick A Letter for your weapon of Choice. ")
+    weapon(let1)
+
+let1 = input("Pick A Letter for your weapon of Choice. ")
+weapon(let1)
+print(Fore.GREEN)
+print("____________________")
+print("HP: " , hp)
+print("Damage: " , damage)
+print("____________________")
+print(Style.RESET_ALL)
+
+print()
+blackyblockybloobloo1 = input("<PRESS ENTER TO CONTINUE> ")
+
+
+fight()
