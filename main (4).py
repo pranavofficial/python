@@ -1,0 +1,14 @@
+import re
+
+redo = 'y'
+
+pattern = "[a-zA-Z0-9]+@[a-zA-Z]+\.(com|edu|net)"
+
+while (redo == 'y'):
+  email = input("What is your email   ")
+  if(re.search(pattern,email)):
+    print("Valid email.")
+    redo = input("Go again? y/n     ")
+  else:
+    print("Invalid email.")
+    redo = input("Go again? y/n     ")
