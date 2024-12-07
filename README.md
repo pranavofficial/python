@@ -1,8 +1,12 @@
-This is where I showcase my more advanced python projects, that I am either working on or am finished with.
+This is where I showcase my more advanced Python projects, which I am either working on or have finished.
 
-Website Scraper--->Basic Website scraper that can read and store all information about a website into a database.
-                    This scraper is currently set to scrape a lego store website.
-                    The scraper also takes the information stored within a database, and allows the user to allocate and change product inventory of the store.
+Website Scraper ---> Basic Website Scraper that can read and store all information about a website in a database.
+                    This scraper is currently set to scrape a Lego store website.
+                    The scraper also takes information stored within a database and allows the user to allocate and change the store's product inventory.
 
-Email Verificator--->Allows the user to input an email and verified if that email is a valid email or not.
+Email Verification Tool ---> Allows the user to input an email and verify whether it is valid.
+
+Mad Lib Game, Number Guessing Game, and String Analyzer ---> Basic Python projects I made, using string manipulation, integer utilization, nested for loops, and other algorithmic concepts
+
+Text Adventure Game ---> An adventure game I programmed for fun, has many different endings and has around 30 downloads.
 
