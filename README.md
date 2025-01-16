@@ -12,3 +12,6 @@ A collection of foundational Python projects that demonstrate proficiency in str
 
 _Text Adventure Game_:
 A dynamic text-based adventure game featuring multiple possible endings. Developed for personal enjoyment, this project has gained significant interest, with over 50+ downloads to date on the Hackingtons Showcase.
+
+_PDF text to speech_:
+This project is a Python-based PDF-to-Audio converter that allows users to listen to the content of PDF documents. Using PyPDF2 to extract text from each page and pyttsx3 to convert the text into speech, the program reads aloud the text of the selected PDF file. It features a simple interface via Tkinter for file selection and allows users to adjust speech rate and volume. The tool is useful for individuals with visual impairments, students, or anyone who prefers consuming written content audibly, and it works seamlessly across multiple operating systems.
